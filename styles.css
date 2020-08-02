@@ -8,10 +8,10 @@ body {
 }
 
 .title {
-    font-size: 3rem;
-    margin-top: 10px;
+    margin: 70px 0;
+    font-size: 5rem;
+    font-weight: 600;
 }
-
 
 input {
     width: 100%;
