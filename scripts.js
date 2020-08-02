@@ -1,4 +1,27 @@
-document.getElementById("submit-btn").addEventListener("click", calculateInput);
+var submitButton = document.getElementById("submit-btn");
+
+submitButton.addEventListener("click", calculateInput);
+
+document.getElementById("total-grams").addEventListener("keyup", function (event) {
+	if (event.keyCode === 13) {
+		event.preventDefault();
+		submitButton.click();
+	}
+});
+
+document.getElementById("number-of-bags").addEventListener("keyup", function (event) {
+	if (event.keyCode === 13) {
+		event.preventDefault();
+		submitButton.click();
+	}
+});
+
+document.getElementById("scoop-size").addEventListener("keyup", function (event) {
+	if (event.keyCode === 13) {
+		event.preventDefault();
+		submitButton.click();
+	}
+});
 
 function calculateInput() {
 	document.getElementById("result").innerHTML = "";
@@ -16,6 +39,11 @@ function calculateInput() {
 		totalGrams = parseFloat(totalGrams);
 		numberOfBags = parseInt(numberOfBags);
 		scoopSize = parseFloat(scoopSize);
+
+		if (totalGrams == 0 || numberOfBags == 0 || scoopSize == 0) {
+			error = "Error: input cannot be 0";
+			return document.getElementById("error").innerHTML = error;
+		}
 
 		if (totalGrams == numberOfBags && scoopSize != 1) {
 			error = "Error: maximum scoop size must be 1";
