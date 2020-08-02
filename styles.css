@@ -23,36 +23,47 @@ input {
     box-sizing: border-box;
     font-size: 3rem;
   }
-  
-  button {
-    width: 100%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 30px 20px;
-    margin: 40px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 3rem;
-    font-weight: 600;
-    letter-spacing: .2rem;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
-  div {
-    border-radius: 5px;    
-    padding: 0 20px;
-  }
 
-  #result {
-      margin-top: 30px;
-      font-weight: 600;
-      font-size: 5rem;
-  }
+button {
+	width: 100%;
+	background-color: #4CAF50;
+	color: white;
+	padding: 30px 20px;
+	margin: 40px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 3rem;
+	font-weight: 600;
+	letter-spacing: .2rem;
+}
 
-  p {
-      margin: 20px 0;
-  }
+button:hover {
+	background-color: #45a049;
+}
+
+div {
+	border-radius: 5px;    
+	padding: 0 20px;
+}
+
+#result {
+	margin-top: 30px;
+	font-weight: 600;
+	font-size: 5rem;
+}
+
+#total {
+	font-weight: 600;
+	font-size: 5rem;
+}
+
+#error {
+	font-weight: 600;
+	font-size: 5rem;
+	color: #d9534f;
+}
+
+p {
+	margin: 20px 0;
+}
