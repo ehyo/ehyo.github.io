@@ -22,6 +22,11 @@ function calculateInput() {
 			return document.getElementById("error").innerHTML = error;
 		}
 
+		if (numberOfBags * scoopSize > totalGrams) {
+			error = "Error: total grams must be greater than bags x scoop size";
+			return document.getElementById("error").innerHTML = error;
+		}
+
 		var numberOfScoops = Math.ceil(totalGrams / scoopSize);
 		var bagsAdditionalScoopsNeeded = numberOfScoops - numberOfBags;
 
@@ -30,22 +35,22 @@ function calculateInput() {
 			var result = { numberTimes: 1, remainder: remainder };
 			if (result.remainder > 0) {
 				answer = "<p>2 pulls for " + remainder + " bags</p> <p>1 pull for " + (numberOfBags - result.remainder) + " bags</p>";
-				total = "<p>Total &#8776; " + ((2 * remainder * scoopSize) + ((numberOfBags - result.remainder) * scoopSize)) + " grams</p>";
+				total = "<p>Total &#8776; " + parseFloat((2 * remainder * scoopSize) + ((numberOfBags - result.remainder) * scoopSize)).toFixed(2) + " grams</p>";
 			}
 			else {
 				answer = "<p>1 pull for " + (numberOfBags - result.remainder) + " bags</p>";
-				total = "<p>Total &#8776; " + ((numberOfBags - result.remainder) * scoopSize) + " grams</p>";
+				total = "<p>Total &#8776; " + parseFloat((numberOfBags - result.remainder) * scoopSize).toFixed(2) + " grams</p>";
 			}
 		}
 		else {
 			var result = bagsAdditionalScoopsNeededFunction(numberOfBags, bagsAdditionalScoopsNeeded);
 			if (result.remainder > 0) {
 				answer = "<p>" + (result.numberTimes + 2) + " pulls for " + result.remainder + " bags</p>" + "<p>" + (result.numberTimes + 1) + " pulls for " + (numberOfBags - result.remainder) + " bags</p>";
-				total = "<p>Total &#8776; " + (((result.numberTimes + 2) * result.remainder * scoopSize) + ((result.numberTimes + 1) * (numberOfBags - result.remainder) * scoopSize)) + " grams</p>"
+				total = "<p>Total &#8776; " + parseFloat(((result.numberTimes + 2) * result.remainder * scoopSize) + ((result.numberTimes + 1) * (numberOfBags - result.remainder) * scoopSize)).toFixed(2) + " grams</p>"
 			}
 			else {
 				answer = "<p>" + (result.numberTimes + 1) + " pulls for " + (numberOfBags - result.remainder) + " bags</p>"
-				total = "<p>Total &#8776; " + (result.numberTimes + 1) * (numberOfBags - result.remainder) * scoopSize + " grams</p>";
+				total = "<p>Total &#8776; " + parseFloat((result.numberTimes + 1) * (numberOfBags - result.remainder) * scoopSize).toFixed(2) + " grams</p>";
 			}
 		}
 
