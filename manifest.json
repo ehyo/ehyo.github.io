@@ -1,0 +1,25 @@
+{
+    "name": "Cannabis Calculator",
+    "short_name": "Cannabis Calc",
+    "icons": [
+        {
+            "src": "/icons/icon-152x152.png",
+            "sizes": "152x152",
+            "type": "image/png"
+        },
+        {
+            "src": "/icons/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/icons/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#f2f2f2",
+    "theme_color": "#31a35d"
+}
