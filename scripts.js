@@ -1,3 +1,13 @@
+var prefersColorScheme = window.matchMedia("(prefers-color-scheme: dark)");
+var theme = document.querySelector("#theme-link");
+
+if (prefersDarkScheme.matches) {
+	theme.href = "/styles-dark.css";
+}
+else {
+	theme.href = "/styles-light.css"
+}
+
 var submitButton = document.getElementById("submit-btn");
 
 submitButton.addEventListener("click", calculateInput);
@@ -45,7 +55,7 @@ function calculateInput() {
 			return document.getElementById("error").innerHTML = error;
 		}
 
-		if (totalGrams == numberOfBags && scoopSize != 1) {
+		if (totalGrams == numberOfBags && scoopSize > 1) {
 			error = "Error: maximum scoop size must be 1";
 			return document.getElementById("error").innerHTML = error;
 		}
