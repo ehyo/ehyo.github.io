@@ -1,7 +1,7 @@
 var prefersColorScheme = window.matchMedia("(prefers-color-scheme: dark)");
 var theme = document.querySelector("#theme-link");
 
-if (prefersDarkScheme.matches) {
+if (prefersColorScheme.matches) {
 	theme.href = "/styles-dark.css";
 }
 else {
