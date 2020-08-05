@@ -1,6 +1,7 @@
 {
     "name": "Cannabis Calculator",
     "short_name": "Cannabis Calc",
+    "description": "Weed Watchers Scale",
     "icons": [
         {
             "src": "/icons/icon-152x152.png",
