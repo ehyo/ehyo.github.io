@@ -1,8 +1,8 @@
-var APP_PREFIX = 'cannabis_calculator'     // Identifier for this app (this needs to be consistent across every cache update)
-var VERSION = 'version_03'              // Version of the off-line cache (change this value everytime you want to update cache)
+var APP_PREFIX = 'cannabis_calculator_'     // Identifier for this app (this needs to be consistent across every cache update)
+var VERSION = 'version_07'              // Version of the off-line cache (change this value everytime you want to update cache)
 var CACHE_NAME = APP_PREFIX + VERSION
 var URLS = [
-    //'/ehyo.github.io/',
+    // '/https://ehyo.github.io/',
     '/index.html',
     '/styles-light.css',
     '/styles-dark.css',
