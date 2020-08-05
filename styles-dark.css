@@ -9,6 +9,11 @@ body {
 	font-size: 2rem;
 }
 
+.flexContainer {
+	display: flex;
+	justify-content: center;
+}
+
 .formResult {
 	margin: 0 10px;
 }
@@ -78,4 +83,10 @@ div {
 
 p {
 	margin: 10px 0;
+}
+
+@media only screen and (min-width: 900px) {
+	.formResult {
+		max-width: 500px;
+	}
 }
